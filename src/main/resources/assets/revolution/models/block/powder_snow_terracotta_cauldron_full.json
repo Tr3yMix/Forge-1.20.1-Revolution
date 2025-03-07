@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/template_cauldron_full",
+  "textures": {
+    "bottom": "revolution:block/terracotta_cauldron_bottom",
+    "content": "minecraft:block/powder_snow",
+    "inside": "revolution:block/terracotta_cauldron_inner",
+    "particle": "minecraft:entity/decorated_pot/decorated_pot_side",
+    "side": "revolution:block/terracotta_cauldron_side",
+    "top": "revolution:block/terracotta_cauldron_top"
+  }
+}

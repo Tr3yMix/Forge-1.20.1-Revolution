@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "revolution:wattle_and_daub"
+  },
+  "result": "revolution:wattle_and_daub_dry"
+}

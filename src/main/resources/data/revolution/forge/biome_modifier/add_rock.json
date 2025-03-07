@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#revolution:spawns_rock",
+  "features": "revolution:patch_rock",
+  "step": "vegetal_decoration"
+}

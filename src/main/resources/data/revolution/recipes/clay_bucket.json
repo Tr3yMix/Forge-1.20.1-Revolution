@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "revolution:raw_clay_bucket"
+  },
+  "result": "revolution:clay_bucket"
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "revolution:block/plant_fiber_block"
+    }
+  }
+}

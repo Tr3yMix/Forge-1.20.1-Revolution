@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "revolution:block/rock0"
+      },
+      {
+        "model": "revolution:block/rock0",
+        "y": 90
+      },
+      {
+        "model": "revolution:block/rock0",
+        "y": 180
+      },
+      {
+        "model": "revolution:block/rock0",
+        "y": 270
+      },
+      {
+        "model": "revolution:block/rock1"
+      },
+      {
+        "model": "revolution:block/rock1",
+        "y": 90
+      },
+      {
+        "model": "revolution:block/rock1",
+        "y": 180
+      },
+      {
+        "model": "revolution:block/rock1",
+        "y": 270
+      }
+    ]
+  }
+}

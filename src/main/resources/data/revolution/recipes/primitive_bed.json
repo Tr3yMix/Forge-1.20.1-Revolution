@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "revolution:plant_fiber_cushion"
+    },
+    "W": {
+      "item": "revolution:wood"
+    }
+  },
+  "pattern": [
+    "##",
+    "WW"
+  ],
+  "result": {
+    "item": "revolution:primitive_bed"
+  },
+  "show_notification": true
+}

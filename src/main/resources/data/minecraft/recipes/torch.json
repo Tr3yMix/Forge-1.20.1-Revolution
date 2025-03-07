@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": [
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "minecraft:charcoal"
+      }
+    ],
+    "P": [
+      {
+        "item": "revolution:plant_fiber"
+      }
+    ]
+  },
+  "pattern": [
+    "X ",
+    "#P"
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:torch"
+  },
+  "show_notification": true
+}

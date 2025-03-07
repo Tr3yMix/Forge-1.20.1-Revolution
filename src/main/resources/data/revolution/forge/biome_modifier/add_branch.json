@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#revolution:spawns_branch",
+  "features": "revolution:patch_branch",
+  "step": "vegetal_decoration"
+}

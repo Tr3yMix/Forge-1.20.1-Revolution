@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "revolution:wood"
+    },
+    "X": {
+      "item": "revolution:plant_fiber"
+    }
+  },
+  "pattern": [
+    "#",
+    "X"
+  ],
+  "result": {
+    "item": "revolution:wooden_shovel_head"
+  },
+  "show_notification": true
+}

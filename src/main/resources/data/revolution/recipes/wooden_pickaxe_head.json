@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "revolution:wood"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "revolution:plant_fiber"
+    }
+  },
+  "pattern": [
+    "SX",
+    " #"
+  ],
+  "result": {
+    "item": "revolution:wooden_pickaxe_head"
+  },
+  "show_notification": true
+}

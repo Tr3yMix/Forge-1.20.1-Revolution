@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "revolution:block/thatch_slab_block"
+    },
+    "type=double": {
+      "model": "revolution:block/thatch_block"
+    },
+    "type=top": {
+      "model": "revolution:block/thatch_slab_block_top"
+    }
+  }
+}

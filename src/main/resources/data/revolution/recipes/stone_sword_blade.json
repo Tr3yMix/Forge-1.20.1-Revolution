@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "revolution:rock"
+    },
+    "X": {
+      "item": "revolution:plant_fiber"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "I#",
+    "#X"
+  ],
+  "result": {
+    "item": "revolution:stone_sword_blade"
+  },
+  "show_notification": true
+}

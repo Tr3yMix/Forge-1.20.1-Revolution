@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "revolution:wooden_handle"
+    },
+    "B": {
+      "item": "revolution:stone_sword_blade"
+    }
+  },
+  "pattern": [
+    " B",
+    "# "
+  ],
+  "result": {
+    "item": "minecraft:stone_sword"
+  },
+  "show_notification": true
+}

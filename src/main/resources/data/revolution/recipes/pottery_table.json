@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "l": {
+      "tag": "minecraft:logs"
+    },
+    "c": {
+      "item": "minecraft:clay_ball"
+    },
+    "r": {
+      "item": "revolution:rock"
+    }
+  },
+  "pattern": [
+    " r",
+    "cl"
+  ],
+  "result": {
+    "item": "revolution:clay_forming_table"
+  },
+  "show_notification": true
+}

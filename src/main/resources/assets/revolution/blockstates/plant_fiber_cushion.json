@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "revolution:block/plant_fiber_cushion",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "revolution:block/plant_fiber_cushion",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "revolution:block/plant_fiber_cushion"
+    },
+    "facing=west": {
+      "model": "revolution:block/plant_fiber_cushion",
+      "y": 90
+    }
+  }
+}
