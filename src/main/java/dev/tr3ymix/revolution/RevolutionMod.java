@@ -1,23 +1,17 @@
 package dev.tr3ymix.revolution;
 
 import com.mojang.logging.LogUtils;
-import dev.tr3ymix.revolution.block.TerracottaLayeredCauldronBlock;
 import dev.tr3ymix.revolution.client.entity.renderer.SeatRenderer;
 import dev.tr3ymix.revolution.client.gui.screens.inventory.PotteryScreen;
 import dev.tr3ymix.revolution.client.gui.screens.inventory.ClayFurnaceScreen;
 import dev.tr3ymix.revolution.core.ClayCauldronInteraction;
 import dev.tr3ymix.revolution.registry.*;
+import dev.tr3ymix.revolution.core.ClayBucketCauldronInteraction;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.core.cauldron.CauldronInteraction;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.stats.Stats;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.LayeredCauldronBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -50,8 +44,6 @@ public class RevolutionMod
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
 
-
-
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEntities.register(modEventBus);
@@ -62,40 +54,14 @@ public class RevolutionMod
         ModLootModifiers.register(modEventBus);
 
 
-
-
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         ClayCauldronInteraction.bootStrap();
-
-        ClayCauldronInteraction.WATER.put(Items.DIRT, (pState, pLevel, pPos, pPlayer, pHand, pStack) -> {
-            if(!pLevel.isClientSide){
-                pPlayer.setItemInHand(pHand, ItemUtils.createFilledResult(pStack, pPlayer, new ItemStack(Items.MUD)));
-                pPlayer.awardStat(Stats.USE_CAULDRON);
-                pLevel.setBlockAndUpdate(pPos, pState.cycle(TerracottaLayeredCauldronBlock.LEVEL));
-                pLevel.playSound(null, pPos, SoundEvents.MUD_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                TerracottaLayeredCauldronBlock.lowerFillLevel(pState, pLevel, pPos);
-            }
-
-            return InteractionResult.sidedSuccess(pLevel.isClientSide);
-        });
-
-        CauldronInteraction.WATER.put(Items.DIRT, (pState, pLevel, pPos, pPlayer, pHand, pStack) -> {
-            if(!pLevel.isClientSide){
-                pPlayer.setItemInHand(pHand, ItemUtils.createFilledResult(pStack, pPlayer, new ItemStack(Items.MUD)));
-                pPlayer.awardStat(Stats.USE_CAULDRON);
-                pLevel.setBlockAndUpdate(pPos, pState.cycle(LayeredCauldronBlock.LEVEL));
-                pLevel.playSound(null, pPos, SoundEvents.MUD_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                LayeredCauldronBlock.lowerFillLevel(pState, pLevel, pPos);
-            }
-
-            return InteractionResult.sidedSuccess(pLevel.isClientSide);
-        });
+        ClayBucketCauldronInteraction.bootStrap();
     }
-
 
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
@@ -121,8 +87,9 @@ public class RevolutionMod
             event.accept(ModItems.STONE_SWORD_BLADE);
             event.accept(ModItems.CRAFTING_HAMMER);
             event.accept(ModItems.RAW_CLAY_BUCKET);
-            event.accept(ModItems.CLAY_BUCKET);
-            event.accept(ModItems.CLAY_WATER_BUCKET);
+            event.accept(ModItems.DAMAGED_CLAY_BUCKET);
+            event.accept(ModItems.PATCHED_CLAY_BUCKET);
+
         }
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
             event.accept(ModBlocks.WATTLE_AND_DAUB);
@@ -143,6 +110,17 @@ public class RevolutionMod
         }
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             event.accept(ModItems.KINDLING);
+            event.accept(ModItems.CLAY_BUCKET);
+            event.accept(ModItems.CLAY_WATER_BUCKET);
+            event.accept(ModItems.CLAY_POWDER_SNOW_BUCKET);
+            event.accept(ModItems.CLAY_LAVA_BUCKET);
+            event.accept(ModItems.CLAY_MILK_BUCKET);
+            event.accept(ModItems.CLAY_PUFFERFISH_BUCKET);
+            event.accept(ModItems.CLAY_SALMON_BUCKET);
+            event.accept(ModItems.CLAY_COD_BUCKET);
+            event.accept(ModItems.CLAY_TROPICAL_FISH_BUCKET);
+            event.accept(ModItems.CLAY_AXOLOTL_BUCKET);
+            event.accept(ModItems.CLAY_TADPOLE_BUCKET);
         }
 
     }

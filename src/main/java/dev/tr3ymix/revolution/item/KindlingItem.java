@@ -65,14 +65,12 @@ public class KindlingItem extends Item {
                     level.playSound(null, blockPos, SoundEvents.FIRECHARGE_USE, SoundSource.BLOCKS, 0.5F, 20.0F);
                 }
 
-                // ✅ **Force usage to complete when time is up**
                 if (elapsedTime >= USE_DURATION - 1) {
-                    player.releaseUsingItem(); // ✅ Manually trigger `releaseUsing()`
-                    System.out.println("used kindling");
+                    player.releaseUsingItem();
                 }
             } else {
                 player.stopUsingItem();
-                 // Cancel usage if no valid block is found
+
             }
         }
     }

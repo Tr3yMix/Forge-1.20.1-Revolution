@@ -35,7 +35,11 @@
   "item.revolution.stone_sword_blade": "Stone Sword Blade",
   "item.revolution.raw_clay_bucket": "Clay Bucket",
   "item.revolution.clay_bucket": "Clay Bucket",
+  "item.revolution.damaged_clay_bucket": "Damaged Clay Bucket",
+  "item.revolution.patched_clay_bucket": "Patched Clay Bucket",
   "item.revolution.clay_water_bucket": "Clay Water Bucket",
+  "item.revolution.clay_powder_snow_bucket": "Clay Powder Snow Bucket",
+  "item.revolution.clay_lava_bucket": "Clay Lava Bucket",
 
   "revolution.container.clay_furnace": "Clay Furnace",
   "revolution.container.pottery_table": "Pottery Table"

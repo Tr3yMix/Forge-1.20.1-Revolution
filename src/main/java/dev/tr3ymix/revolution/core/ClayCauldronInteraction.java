@@ -2,6 +2,7 @@ package dev.tr3ymix.revolution.core;
 
 import dev.tr3ymix.revolution.block.TerracottaLayeredCauldronBlock;
 import dev.tr3ymix.revolution.registry.ModBlocks;
+import dev.tr3ymix.revolution.registry.ModItems;
 import it.unimi.dsi.fastutil.objects.AbstractObject2ObjectFunction;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.minecraft.Util;

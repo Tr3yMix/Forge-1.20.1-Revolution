@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "revolution:item/damaged_clay_bucket"
+  }
+}
