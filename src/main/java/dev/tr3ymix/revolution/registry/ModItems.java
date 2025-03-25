@@ -37,7 +37,6 @@ public class ModItems {
     public static final RegistryObject<Item> SHEEP_HIDE = ITEMS.register("sheep_hide",
             () -> new Item(new Item.Properties()));
 
-
     public static final RegistryObject<Item> WOODEN_HANDLE = ITEMS.register("wooden_handle",
             () -> new Item(new Item.Properties()));
 
@@ -98,23 +97,18 @@ public class ModItems {
     public static final RegistryObject<Item> CLAY_MILK_BUCKET = ITEMS.register("clay_milk_bucket",
             () -> new ClayMilkBucketItem(new Item.Properties().craftRemainder(CLAY_BUCKET.get()).stacksTo(1)));
 
-    public static final RegistryObject<Item> CLAY_PUFFERFISH_BUCKET = ITEMS.register("clay_pufferfish_bucket",
-            () -> new ClayMobBucketItem(EntityType.PUFFERFISH, Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> RAW_CLAY_CRUCIBLE = ITEMS.register("raw_clay_crucible",
+            () -> new Item(new Item.Properties().stacksTo(16)));
 
-    public static final RegistryObject<Item> CLAY_SALMON_BUCKET = ITEMS.register("clay_salmon_bucket",
-            () -> new ClayMobBucketItem(EntityType.SALMON, Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CLAY_CRUCIBLE = ITEMS.register("clay_crucible",
+            () -> new Item(new Item.Properties().stacksTo(16)));
 
-    public static final RegistryObject<Item> CLAY_COD_BUCKET = ITEMS.register("clay_cod_bucket",
-            () -> new ClayMobBucketItem(EntityType.COD, Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CLAY_RAW_IRON_CRUCIBLE = ITEMS.register("clay_raw_iron_crucible",
+            () -> new Item(new Item.Properties().stacksTo(16)));
 
-    public static final RegistryObject<Item> CLAY_TROPICAL_FISH_BUCKET = ITEMS.register("clay_tropical_fish_bucket",
-            () -> new ClayMobBucketItem(EntityType.TROPICAL_FISH, Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CLAY_MOLTEN_IRON_CRUCIBLE = ITEMS.register("clay_molten_iron_crucible",
+            () -> new Item(new Item.Properties().stacksTo(16)));
 
-    public static final RegistryObject<Item> CLAY_AXOLOTL_BUCKET = ITEMS.register("clay_axolotl_bucket",
-            () -> new ClayMobBucketItem(EntityType.AXOLOTL, Fluids.WATER, SoundEvents.BUCKET_EMPTY_AXOLOTL, new Item.Properties().stacksTo(1)));
-
-    public static final RegistryObject<Item> CLAY_TADPOLE_BUCKET = ITEMS.register("clay_tadpole_bucket",
-            () -> new ClayMobBucketItem(EntityType.TADPOLE, Fluids.WATER, SoundEvents.BUCKET_EMPTY_TADPOLE, new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

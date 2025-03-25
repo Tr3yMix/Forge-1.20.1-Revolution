@@ -1,0 +1,164 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/cube",
+	"ambientocclusion": false,
+	"render_type": "cutout",
+	"textures": {
+		"0": "block/campfire_log",
+		"1": "revolution:block/thatch",
+		"particle": "revolution:block/thatch_block",
+		"2_1": "revolution:block/thatch_block"
+	},
+	"elements": [
+		{
+			"name": "north",
+			"from": [0, 1, -4],
+			"to": [16, 1, 0],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 1, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0], "texture": "#1"},
+				"east": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"up": {"uv": [0, 7, 16, 11], "rotation": 180, "texture": "#1"},
+				"down": {"uv": [0, 7, 16, 11], "texture": "#1"}
+			}
+		},
+		{
+			"name": "south",
+			"from": [0, 1, 16],
+			"to": [16, 1, 20],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 1, 16]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [0, 0, 0, 4], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 4], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [0, 7, 16, 11], "texture": "#1"},
+				"down": {"uv": [0, 7, 16, 11], "rotation": 180, "texture": "#1"}
+			}
+		},
+		{
+			"name": "south",
+			"from": [3, 1, 0],
+			"to": [3, 5, 16],
+			"rotation": {"angle": 45, "axis": "z", "origin": [3, 1, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 4], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [0, 7, 16, 11], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [0, 0, 0, 4], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [0, 7, 16, 11], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 0], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [0, 0, 16, 0], "rotation": 270, "texture": "#1"}
+			}
+		},
+		{
+			"name": "south",
+			"from": [13, 1, 0],
+			"to": [13, 5, 16],
+			"rotation": {"angle": -45, "axis": "z", "origin": [13, 1, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 4], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [0, 7, 16, 11], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [0, 0, 0, 4], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [0, 7, 16, 11], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 0], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [0, 0, 16, 0], "rotation": 270, "texture": "#1"}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [2, 2, 16],
+			"faces": {
+				"north": {"uv": [1, 5, 3, 7], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 2], "texture": "#0"},
+				"south": {"uv": [1, 5, 3, 7], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 2], "texture": "#0"},
+				"up": {"uv": [0, 2, 16, 4], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 2], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"from": [14, 0, 0],
+			"to": [16, 2, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14, 0, 0]},
+			"faces": {
+				"north": {"uv": [1, 5, 3, 7], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 2], "texture": "#0"},
+				"south": {"uv": [1, 5, 3, 7], "texture": "#0"},
+				"west": {"uv": [0, 2, 16, 4], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 2], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 2, 16, 4], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"from": [2, 0, 0],
+			"to": [14, 1, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 12, 1], "texture": "#2_1"},
+				"east": {"uv": [0, 0, 16, 1], "texture": "#2_1"},
+				"south": {"uv": [0, 0, 12, 1], "texture": "#2_1"},
+				"west": {"uv": [0, 0, 16, 1], "texture": "#2_1"},
+				"up": {"uv": [0, 0, 12, 16], "texture": "#2_1"},
+				"down": {"uv": [0, 0, 12, 16], "texture": "#2_1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"translation": [0, 4.25, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 180, 0],
+			"translation": [2.75, 4, 5.75]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [0, 3, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"translation": [0, 14, 0]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "thatch_slab_block",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [
+				{
+					"name": "bottom_thatch",
+					"origin": [8, 5, 16],
+					"color": 0,
+					"children": [0, 1, 2, 3]
+				}
+			]
+		},
+		{
+			"name": "thatch_bed",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [4, 5, 6]
+		}
+	]
+}

@@ -3,6 +3,9 @@
   "values": [
     "#minecraft:is_forest",
     "#minecraft:is_taiga",
-    "minecraft:swamp"
+    "#minecraft:is_jungle",
+    "#forge:is_swamp",
+    "#forge:is_dense",
+    "minecraft:grove"
   ]
 }

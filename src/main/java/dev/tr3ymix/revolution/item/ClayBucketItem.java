@@ -165,7 +165,7 @@ public class ClayBucketItem extends Item implements DispensibleContainerItem {
 
     public static ItemStack getEmptySuccessItem(ItemStack pBucketStack, Player pPlayer) {
         ItemStack result = pBucketStack == ModItems.CLAY_LAVA_BUCKET.get().getDefaultInstance() ?
-                new ItemStack(ModItems.CLAY_BUCKET.get()) : new ItemStack(ModItems.DAMAGED_CLAY_BUCKET.get());
+                 new ItemStack(ModItems.DAMAGED_CLAY_BUCKET.get()) : new ItemStack(ModItems.CLAY_BUCKET.get());
         return !pPlayer.getAbilities().instabuild ? result : pBucketStack;
     }
 

@@ -8,19 +8,19 @@
 		"5": "revolution:block/clay_cauldron_top",
 		"6": "revolution:block/clay_cauldron_bottom",
 		"7": "revolution:block/clay_cauldron_inner",
-		"particle": "block/clay"
+		"particle": "revolution:block/pottery_clay"
 	},
 	"elements": [
 		{
 			"from": [0, 3, 0],
 			"to": [2, 16, 16],
 			"faces": {
-				"north": {"uv": [14, 0, 16, 13], "texture": "#4", "shade":  false},
-				"east": {"uv": [0, 0, 16, 13], "texture": "#4", "shade":  false},
-				"south": {"uv": [0, 0, 2, 13], "texture": "#4", "shade":  false},
-				"west": {"uv": [0, 0, 16, 13], "texture": "#4", "shade":  false},
-				"up": {"uv": [0, 0, 2, 16], "texture": "#5", "shade":  false},
-				"down": {"uv": [0, 0, 2, 16], "texture": "#7", "shade":  false}
+				"north": {"uv": [14, 0, 16, 13], "texture": "#4"},
+				"east": {"uv": [0, 0, 16, 13], "texture": "#4"},
+				"south": {"uv": [0, 0, 2, 13], "texture": "#4"},
+				"west": {"uv": [0, 0, 16, 13], "texture": "#4"},
+				"up": {"uv": [0, 0, 2, 16], "texture": "#5"},
+				"down": {"uv": [0, 0, 2, 16], "texture": "#7"}
 			}
 		},
 		{

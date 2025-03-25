@@ -5,6 +5,7 @@ import dev.tr3ymix.revolution.client.entity.renderer.SeatRenderer;
 import dev.tr3ymix.revolution.client.gui.screens.inventory.PotteryScreen;
 import dev.tr3ymix.revolution.client.gui.screens.inventory.ClayFurnaceScreen;
 import dev.tr3ymix.revolution.core.ClayCauldronInteraction;
+import dev.tr3ymix.revolution.core.SoundModifier;
 import dev.tr3ymix.revolution.registry.*;
 import dev.tr3ymix.revolution.core.ClayBucketCauldronInteraction;
 import net.minecraft.client.color.block.BlockColors;
@@ -53,6 +54,8 @@ public class RevolutionMod
         ModFeatures.register(modEventBus);
         ModLootModifiers.register(modEventBus);
 
+        SoundModifier.init();
+
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -89,19 +92,21 @@ public class RevolutionMod
             event.accept(ModItems.RAW_CLAY_BUCKET);
             event.accept(ModItems.DAMAGED_CLAY_BUCKET);
             event.accept(ModItems.PATCHED_CLAY_BUCKET);
+            event.accept(ModItems.RAW_CLAY_CRUCIBLE);
 
         }
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
             event.accept(ModBlocks.WATTLE_AND_DAUB);
             event.accept(ModBlocks.WATTLE_AND_DAUB_DRY);
-            event.accept(ModBlocks.THATCH_BLOCK);
-            event.accept(ModBlocks.THATCH_SLAB_BLOCK);
+            event.accept(ModBlocks.REEDS);
+            event.accept(ModBlocks.THATCH);
+            event.accept(ModBlocks.THATCH_SLAB);
             event.accept(ModBlocks.PLANT_FIBER_BLOCK);
         }
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
             event.accept(ModBlocks.PLANT_FIBER_CUSHION);
             event.accept(ModBlocks.PLANT_FIBER_BLOCK);
-            event.accept(ModBlocks.PRIMITIVE_BED);
+            event.accept(ModBlocks.THATCH_BED);
             event.accept(ModBlocks.CLAY_FURNACE);
             event.accept(ModBlocks.TERRACOTTA_FURNACE);
             event.accept(ModBlocks.CLAY_CAULDRON);
@@ -115,24 +120,18 @@ public class RevolutionMod
             event.accept(ModItems.CLAY_POWDER_SNOW_BUCKET);
             event.accept(ModItems.CLAY_LAVA_BUCKET);
             event.accept(ModItems.CLAY_MILK_BUCKET);
-            event.accept(ModItems.CLAY_PUFFERFISH_BUCKET);
-            event.accept(ModItems.CLAY_SALMON_BUCKET);
-            event.accept(ModItems.CLAY_COD_BUCKET);
-            event.accept(ModItems.CLAY_TROPICAL_FISH_BUCKET);
-            event.accept(ModItems.CLAY_AXOLOTL_BUCKET);
-            event.accept(ModItems.CLAY_TADPOLE_BUCKET);
+            event.accept(ModItems.CLAY_CRUCIBLE);
+            event.accept(ModItems.CLAY_RAW_IRON_CRUCIBLE);
+            event.accept(ModItems.CLAY_MOLTEN_IRON_CRUCIBLE);
         }
 
     }
-
-
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
 
     }
-
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
@@ -144,6 +143,7 @@ public class RevolutionMod
             MenuScreens.register(ModMenuTypes.POTTERY_MENU.get(), PotteryScreen::new);
 
             EntityRenderers.register(ModEntities.SEAT.get(), SeatRenderer::new);
+
         }
 
         @SubscribeEvent
@@ -152,5 +152,8 @@ public class RevolutionMod
             blockColors.register(((pState, pLevel, pPos, pTintIndex) -> pLevel != null && pPos != null ?
                     BiomeColors.getAverageWaterColor(pLevel, pPos) : -1), ModBlocks.WATER_TERRACOTTA_CAULDRON.get());
         }
+
+
+
     }
 }

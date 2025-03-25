@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "revolution:clay_forming_table"
+          "name": "revolution:pottery_table"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "revolution:clay_forming_table"
+  "random_sequence": "revolution:pottery_table"
 }
