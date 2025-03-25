@@ -48,6 +48,11 @@ public interface ClayBucketCauldronInteraction {
                     Blocks.POWDER_SNOW_CAULDRON.defaultBlockState()
                             .setValue(TerracottaLayeredCauldronBlock.LEVEL, 3), SoundEvents.BUCKET_EMPTY_POWDER_SNOW);
 
+    CauldronInteraction FILL_LAVA = (pState, pLevel, pPos, pPlayer, pHand, pStack) ->
+            emptyClayBucket(pLevel, pPos, pPlayer, pHand, pStack,
+                    Blocks.LAVA_CAULDRON.defaultBlockState()
+                            .setValue(TerracottaLayeredCauldronBlock.LEVEL, 3), SoundEvents.BUCKET_EMPTY_LAVA);
+
     static void bootStrap(){
         clayCauldronBootStrap();
         vanillaCauldronBootStrap();
@@ -87,6 +92,7 @@ public interface ClayBucketCauldronInteraction {
         addVanillaCauldronDefaultClayInteractions(CauldronInteraction.EMPTY);
         addVanillaCauldronDefaultClayInteractions(CauldronInteraction.WATER);
         addVanillaCauldronDefaultClayInteractions(CauldronInteraction.POWDER_SNOW);
+        addVanillaCauldronDefaultClayInteractions(CauldronInteraction.LAVA);
 
         CauldronInteraction.WATER.put(ModItems.CLAY_BUCKET.get(), (pState, pLevel, pPos, pPlayer, pHand, pStack) ->
                 CauldronInteraction.fillBucket(pState, pLevel, pPos, pPlayer, pHand, pStack,
@@ -109,6 +115,11 @@ public interface ClayBucketCauldronInteraction {
 
             return InteractionResult.sidedSuccess(pLevel.isClientSide);
         });
+
+        CauldronInteraction.LAVA.put(ModItems.CLAY_BUCKET.get(), (pState, pLevel, pPos, pPlayer, pHand, pStack) ->
+                CauldronInteraction.fillBucket(pState, pLevel, pPos, pPlayer, pHand, pStack,
+                        new ItemStack(ModItems.CLAY_LAVA_BUCKET.get()), (blockState -> blockState.getValue(TerracottaLayeredCauldronBlock.LEVEL) == 3),
+                        SoundEvents.BUCKET_FILL_LAVA));
     }
 
     static void addClayCauldronDefaultClayInteractions(Map<Item, ClayCauldronInteraction> pInteractionsMap){
@@ -116,6 +127,7 @@ public interface ClayBucketCauldronInteraction {
         pInteractionsMap.put(ModItems.CLAY_POWDER_SNOW_BUCKET.get(), FILL_POWDER_SNOW_CLAY);
     }
     static void addVanillaCauldronDefaultClayInteractions(Map<Item, CauldronInteraction> pInteractionsMap){
+        pInteractionsMap.put(ModItems.CLAY_LAVA_BUCKET.get(), FILL_LAVA);
         pInteractionsMap.put(ModItems.CLAY_WATER_BUCKET.get(), FILL_WATER);
         pInteractionsMap.put(ModItems.CLAY_POWDER_SNOW_BUCKET.get(), FILL_POWDER_SNOW);
     }
@@ -125,7 +137,9 @@ public interface ClayBucketCauldronInteraction {
                                              ItemStack pStack, BlockState pState, SoundEvent pEmptySound) {
         if(!pLevel.isClientSide) {
             Item item = pStack.getItem();
-            pPlayer.setItemInHand(pHand, ItemUtils.createFilledResult(pStack, pPlayer, new ItemStack(ModItems.CLAY_BUCKET.get())));
+            ItemStack result = pStack == ModItems.CLAY_LAVA_BUCKET.get().getDefaultInstance() ?
+                    new ItemStack(ModItems.DAMAGED_CLAY_BUCKET.get()) : new ItemStack(ModItems.CLAY_BUCKET.get());
+            pPlayer.setItemInHand(pHand, ItemUtils.createFilledResult(pStack, pPlayer, result));
             pPlayer.awardStat(Stats.FILL_CAULDRON);
             pPlayer.awardStat(Stats.ITEM_USED.get(item));
             pLevel.setBlockAndUpdate(pPos, pState);

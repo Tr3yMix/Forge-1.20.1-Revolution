@@ -73,19 +73,18 @@ public class TerracottaFurnaceBlock extends AbstractFurnaceBlock {
         double pY = pRandom.nextDouble() * 9.0 / 16.0;
         double pZ = axis == Direction.Axis.Z ? (double)direction.getStepZ() * 0.52 : randomOffset;
         pLevel.addParticle(ParticleTypes.FLAME, x + pX, y + pY, z + pZ, 0.0, 0.0, 0.0);
+
     }
 
     private void spawnSmokeParticles(Level pLevel, double x, double y, double z, RandomSource pRandom){
 
-        double randomOffset = pRandom.nextDouble() * 0.6 - 0.3;
-
-        pLevel.addParticle(ParticleTypes.SMOKE, x, y + 16 + randomOffset, z, 0.0, 0.0, 0.0);
+        pLevel.addParticle(ParticleTypes.LARGE_SMOKE, x, y + 0.9F, z, 0.0, 0.0, 0.0);
     }
 
     @SuppressWarnings("deprecation")
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
-        return Block.box(1, 0, 1, 15, 16, 15);
+        return Block.box(1, 0, 1, 15, 15, 15);
     }
 
 

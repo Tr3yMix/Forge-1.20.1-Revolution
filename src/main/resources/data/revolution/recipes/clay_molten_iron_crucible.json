@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "revolution:clay_raw_iron_crucible"
+  },
+  "result": "revolution:clay_molten_iron_crucible"
+}

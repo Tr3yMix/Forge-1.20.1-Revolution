@@ -1,7 +1,6 @@
 package dev.tr3ymix.revolution.block;
 
 import dev.tr3ymix.revolution.Config;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -21,10 +20,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-public class PrimitiveBedBlock extends BedBlock {
+public class ThatchBedBlock extends BedBlock {
 
 
-    public PrimitiveBedBlock(Properties pProperties) {
+    public ThatchBedBlock(Properties pProperties) {
         super(DyeColor.GREEN, pProperties);
     }
 
@@ -38,7 +37,7 @@ public class PrimitiveBedBlock extends BedBlock {
         }
         else{
             if(pPlayer instanceof ServerPlayer player){
-                player.displayClientMessage(Component.literal("You cannot sleep unless a lit campfire is nearby!").withStyle(ChatFormatting.BOLD), true);
+                player.displayClientMessage(Component.literal("You cannot sleep unless a lit campfire is nearby!"), true);
             }
             return InteractionResult.PASS;
         }
@@ -61,6 +60,7 @@ public class PrimitiveBedBlock extends BedBlock {
         return Block.box(0, 0, 0, 16, 2, 16);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public @NotNull RenderShape getRenderShape(@NotNull BlockState pState) {
         return RenderShape.MODEL;

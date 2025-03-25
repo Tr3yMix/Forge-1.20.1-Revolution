@@ -1,0 +1,8 @@
+{
+  "type": "revolution:pottery",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:clay"
+  },
+  "result": "revolution:raw_clay_crucible"
+}

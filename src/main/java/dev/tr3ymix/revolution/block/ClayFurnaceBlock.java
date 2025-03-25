@@ -33,7 +33,7 @@ public class ClayFurnaceBlock extends HorizontalDirectionalBlock {
     @SuppressWarnings("deprecation")
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
-        return Block.box(1, 0, 1, 15, 16, 15);
+        return Block.box(1, 0, 1, 15, 15, 15);
     }
 
     @Override

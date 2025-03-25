@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "revolution:block/thatch_bed",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "revolution:block/thatch_bed",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "revolution:block/thatch_bed"
+    },
+    "facing=west": {
+      "model": "revolution:block/thatch_bed",
+      "y": 90
+    }
+  }
+}
