@@ -74,6 +74,7 @@ public class RevolutionMod
             event.accept(ModBlocks.BRANCH);
             event.accept(ModBlocks.ROCK);
             event.accept(ModItems.WOOD);
+            event.accept(ModItems.THATCH);
             event.accept(ModItems.DAUB);
             event.accept(ModItems.COW_HIDE);
             event.accept(ModItems.SHEEP_HIDE);
@@ -98,8 +99,8 @@ public class RevolutionMod
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
             event.accept(ModBlocks.WATTLE_AND_DAUB);
             event.accept(ModBlocks.WATTLE_AND_DAUB_DRY);
-            event.accept(ModBlocks.REEDS);
-            event.accept(ModBlocks.THATCH);
+            event.accept(ModBlocks.REED_SPROUT);
+            event.accept(ModBlocks.THATCH_BLOCK);
             event.accept(ModBlocks.THATCH_SLAB);
             event.accept(ModBlocks.PLANT_FIBER_BLOCK);
         }

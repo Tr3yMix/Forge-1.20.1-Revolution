@@ -12,8 +12,6 @@
     "minecraft:windswept_forest",
     "minecraft:windswept_hills",
     "minecraft:windswept_gravelly_hills",
-    "minecraft:stony_shore",
-    "minecraft:swamp",
-    "minecraft:mangrove"
+    "minecraft:stony_shore"
   ]
 }

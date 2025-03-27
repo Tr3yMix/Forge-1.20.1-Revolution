@@ -41,17 +41,16 @@ public interface ClayBucketCauldronInteraction {
     CauldronInteraction FILL_WATER = (pState, pLevel, pPos, pPlayer, pHand, pStack) ->
             emptyClayBucket(pLevel, pPos, pPlayer, pHand, pStack,
                     Blocks.WATER_CAULDRON.defaultBlockState()
-                            .setValue(TerracottaLayeredCauldronBlock.LEVEL, 3), SoundEvents.BUCKET_EMPTY);
+                            .setValue(LayeredCauldronBlock.LEVEL, 3), SoundEvents.BUCKET_EMPTY);
 
     CauldronInteraction FILL_POWDER_SNOW = (pState, pLevel, pPos, pPlayer, pHand, pStack) ->
             emptyClayBucket(pLevel, pPos, pPlayer, pHand, pStack,
                     Blocks.POWDER_SNOW_CAULDRON.defaultBlockState()
-                            .setValue(TerracottaLayeredCauldronBlock.LEVEL, 3), SoundEvents.BUCKET_EMPTY_POWDER_SNOW);
+                            .setValue(LayeredCauldronBlock.LEVEL, 3), SoundEvents.BUCKET_EMPTY_POWDER_SNOW);
 
     CauldronInteraction FILL_LAVA = (pState, pLevel, pPos, pPlayer, pHand, pStack) ->
             emptyClayBucket(pLevel, pPos, pPlayer, pHand, pStack,
-                    Blocks.LAVA_CAULDRON.defaultBlockState()
-                            .setValue(TerracottaLayeredCauldronBlock.LEVEL, 3), SoundEvents.BUCKET_EMPTY_LAVA);
+                    Blocks.LAVA_CAULDRON.defaultBlockState(), SoundEvents.BUCKET_EMPTY_LAVA);
 
     static void bootStrap(){
         clayCauldronBootStrap();
@@ -118,7 +117,7 @@ public interface ClayBucketCauldronInteraction {
 
         CauldronInteraction.LAVA.put(ModItems.CLAY_BUCKET.get(), (pState, pLevel, pPos, pPlayer, pHand, pStack) ->
                 CauldronInteraction.fillBucket(pState, pLevel, pPos, pPlayer, pHand, pStack,
-                        new ItemStack(ModItems.CLAY_LAVA_BUCKET.get()), (blockState -> blockState.getValue(TerracottaLayeredCauldronBlock.LEVEL) == 3),
+                        new ItemStack(ModItems.CLAY_LAVA_BUCKET.get()), (blockState)-> true,
                         SoundEvents.BUCKET_FILL_LAVA));
     }
 

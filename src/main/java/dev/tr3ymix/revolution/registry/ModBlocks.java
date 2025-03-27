@@ -30,16 +30,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> ROCK = registerBlock("rock",
             () -> new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().sound(SoundType.BASALT).noCollission()));
 
+    public static final RegistryObject<Block> REED_SPROUT = registerBlock("reed_sprout",
+            () -> new ReedSproutBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)
+                    .offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> REEDS = registerBlock("reeds",
             () -> new DoublePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).replaceable()
                     .noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)
                     .ignitedByLava().pushReaction(PushReaction.DESTROY)));
 
-    public static final RegistryObject<Block> THATCH = registerBlock("thatch_block",
+    public static final RegistryObject<Block> THATCH_BLOCK = registerBlock("thatch_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).strength(0.2F).sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> THATCH_SLAB = registerBlock("thatch_slab_block",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(THATCH.get()).noOcclusion()));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(THATCH_BLOCK.get()).noOcclusion()));
 
     public static final RegistryObject<Block> THATCH_BED = registerBlock("thatch_bed",
             () -> new ThatchBedBlock(BlockBehaviour.Properties.copy(Blocks.GRAY_BED).sound(SoundType.MANGROVE_ROOTS).noOcclusion()));

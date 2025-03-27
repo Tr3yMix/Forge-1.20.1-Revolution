@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "revolution:thatch"
+    },
+    {
+      "item": "revolution:thatch"
+    },
+    {
+      "item": "revolution:thatch"
+    },
+    {
+      "item": "revolution:thatch"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "revolution:thatch_block"
+  }
+}

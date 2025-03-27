@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "revolution:reed_sprout"
+    },
+    {
+      "item": "revolution:reed_sprout"
+    },
+    {
+      "item": "revolution:reed_sprout"
+    },
+    {
+      "item": "revolution:reed_sprout"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "revolution:thatch"
+  }
+}

@@ -28,6 +28,9 @@ public class ModItems {
     public static final RegistryObject<Item> WOOD = ITEMS.register("wood",
             () -> new FuelItem(new Item.Properties(), 100));
 
+    public static final RegistryObject<Item> THATCH = ITEMS.register("thatch",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> DAUB = ITEMS.register("daub",
             () -> new Item(new Item.Properties()));
 

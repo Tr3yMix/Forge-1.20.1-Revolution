@@ -6,7 +6,7 @@
   "textures": {
     "particle": "revolution:block/thatch_block",
     "all": "revolution:block/thatch_block",
-    "thatch": "revolution:block/thatch"
+    "thatch": "revolution:block/thatch_side"
   },
   "elements": [
     {

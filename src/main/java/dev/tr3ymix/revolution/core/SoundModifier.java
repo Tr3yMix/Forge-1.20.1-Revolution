@@ -13,6 +13,10 @@ public class SoundModifier {
     public static void init() {
         modifySound(Blocks.CLAY, SoundType.MUD);
         modifySound(Blocks.SUGAR_CANE, SoundType.BAMBOO);
+        modifySound(Blocks.CAULDRON, SoundType.NETHERITE_BLOCK);
+        modifySound(Blocks.LAVA_CAULDRON, SoundType.NETHERITE_BLOCK);
+        modifySound(Blocks.WATER_CAULDRON, SoundType.NETHERITE_BLOCK);
+        modifySound(Blocks.POWDER_SNOW_CAULDRON, SoundType.NETHERITE_BLOCK);
     }
 
     private static void modifySound(Block block, SoundType soundType){

@@ -5,7 +5,7 @@
   "ambientocclusion": false,
   "textures": {
     "0": "revolution:block/thatch_block",
-    "1": "revolution:block/thatch",
+    "1": "revolution:block/thatch_side",
     "particle": "revolution:block/thatch_block"
   },
   "elements": [

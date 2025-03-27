@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#revolution:spawns_reeds",
+  "features": "revolution:patch_reeds",
+  "step": "vegetal_decoration"
+}
