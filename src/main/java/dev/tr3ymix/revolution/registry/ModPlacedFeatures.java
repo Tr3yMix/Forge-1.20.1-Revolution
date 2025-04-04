@@ -23,7 +23,7 @@ public class ModPlacedFeatures {
         register(context, PATCH_ROCK, ModConfiguredFeatures.PATCH_ROCK, VegetationPlacements.worldSurfaceSquaredWithCount(2));
 
         register(context, PATCH_REEDS, ModConfiguredFeatures.PATCH_REEDS, List.of(
-                CountPlacement.of(8),
+                CountPlacement.of(1),
                 InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP,
                 SurfaceWaterDepthFilter.forMaxDepth(2),

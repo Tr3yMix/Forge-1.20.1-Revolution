@@ -1,7 +1,0 @@
-// 1.20.1	2025-03-04T02:13:16.1060027	Registries
-7b27727c2c0a90f6fac9fd50bef638bbbcf5b287 data/revolution/forge/biome_modifier/add_branch.json
-b3d4feb3ecc3623b2fa736458a53321c59200a3c data/revolution/forge/biome_modifier/add_rock.json
-1ce80325c5ee8bd2f04c14d2e3358f89ca6ee366 data/revolution/worldgen/configured_feature/patch_branch.json
-10b39d15416700002361ea3d3b28b40082643c14 data/revolution/worldgen/configured_feature/patch_rock.json
-7136c1b1f800f0ac80b97e768c5d1fc1475b49c1 data/revolution/worldgen/placed_feature/patch_branch.json
-e1368c8cbd2743030692d952d2dbc5677d104dbe data/revolution/worldgen/placed_feature/patch_rock.json

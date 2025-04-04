@@ -5,7 +5,6 @@ import dev.tr3ymix.revolution.client.entity.renderer.SeatRenderer;
 import dev.tr3ymix.revolution.client.gui.screens.inventory.PotteryScreen;
 import dev.tr3ymix.revolution.client.gui.screens.inventory.ClayFurnaceScreen;
 import dev.tr3ymix.revolution.core.ClayCauldronInteraction;
-import dev.tr3ymix.revolution.core.SoundModifier;
 import dev.tr3ymix.revolution.registry.*;
 import dev.tr3ymix.revolution.core.ClayBucketCauldronInteraction;
 import net.minecraft.client.color.block.BlockColors;
@@ -53,9 +52,6 @@ public class RevolutionMod
         ModRecipes.register(modEventBus);
         ModFeatures.register(modEventBus);
         ModLootModifiers.register(modEventBus);
-
-        SoundModifier.init();
-
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

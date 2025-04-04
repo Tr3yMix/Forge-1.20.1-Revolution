@@ -60,9 +60,13 @@ minecraft {
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
     runs {
+
+
         // applies to all the run configs below
         configureEach {
-            workingDirectory project.file('run')
+
+
+            workingDirectory project.file("run")
 
             // Recommended logging data for a userdev environment
             // The markers can be added/remove as needed separated by commas.
@@ -84,11 +88,19 @@ minecraft {
         }
 
         client {
+            workingDirectory project.file("run")
+
+            property("mixin.env.remapRefMap", "true")
+            property("mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg")
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', mod_id
         }
 
         server {
+
+            property("mixin.env.remapRefMap", "true")
+            property("mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg")
+
             property 'forge.enabledGameTestNamespaces', mod_id
             args '--nogui'
         }
@@ -119,9 +131,9 @@ repositories {
 
     // If you have mod jar dependencies in ./libs, you can declare them as a repository like so.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html#sub:flat_dir_resolver
-    // flatDir {
-    //     dir 'libs'
-    // }
+    flatDir {
+        dir 'libs'
+    }
 
     maven{
         name = "Jared's maven"
@@ -130,6 +142,8 @@ repositories {
     maven {
         url = "https://www.cursemaven.com"
     }
+
+    mavenCentral()
 
 
 }
@@ -143,15 +157,20 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
     implementation 'org.spongepowered:mixin:0.8.5'
 
-
+    implementation fg.deobf("curse.maven:twigs-496913:4998195")
+    implementation fg.deobf("curse.maven:mru-669659:5848512")
+    implementation fg.deobf("curse.maven:sound-925889:5940443")
 
     // compile against the JEI API but do not include it at runtime
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
     // at runtime, use the full JEI jar for Forge
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+
+    runtimeOnly(fg.deobf("curse.maven:tectonic-686836:5676419"))
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
@@ -197,6 +216,7 @@ tasks.named('processResources', ProcessResources).configure {
     filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
         expand replaceProperties + [project: project]
     }
+
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -238,4 +258,9 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+
+jar{
+    destinationDirectory.set(file("C:/Users/treyh/curseforge/minecraft/Instances/MC Revolution 0.1a/mods"))
 }

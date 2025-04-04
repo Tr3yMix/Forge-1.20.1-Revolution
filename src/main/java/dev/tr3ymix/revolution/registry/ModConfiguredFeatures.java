@@ -28,7 +28,7 @@ public class ModConfiguredFeatures {
                 ModFeatures.LAYER_BLOCK.get(), new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ROCK.get()))
         )));
 
-        registerConfiguredFeature(context, PATCH_REEDS, Feature.RANDOM_PATCH, new RandomPatchConfiguration(25, 5, 5, PlacementUtils.onlyWhenEmpty(
+        registerConfiguredFeature(context, PATCH_REEDS, Feature.RANDOM_PATCH, new RandomPatchConfiguration(150, 10, 2, PlacementUtils.onlyWhenEmpty(
                 ModFeatures.LAYER_BLOCK.get(), new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.REEDS.get()))
         )));
     }

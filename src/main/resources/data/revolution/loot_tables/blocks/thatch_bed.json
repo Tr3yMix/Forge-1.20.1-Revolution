@@ -13,7 +13,7 @@
           "type": "minecraft:item",
           "conditions": [
             {
-              "block": "revolution:primitive_bed",
+              "block": "revolution:thatch_bed",
               "condition": "minecraft:block_state_property",
               "properties": {
                 "part": "head"
@@ -37,5 +37,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "revolution:blocks/primitive_bed"
+  "random_sequence": "revolution:blocks/thatch_bed"
 }
