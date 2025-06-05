@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "twigs:silt_ball"
+    },
+    {
+      "item": "twigs:silt_ball"
+    },
+    {
+      "item": "twigs:silt_ball"
+    },
+    {
+      "item": "twigs:silt_ball"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "immersive_weathering:silt"
+  }
+}

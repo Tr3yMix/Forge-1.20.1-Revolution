@@ -1,7 +1,6 @@
 {
-  "replace": true,
+  "replace": false,
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     {
       "item": "minecraft:stick"

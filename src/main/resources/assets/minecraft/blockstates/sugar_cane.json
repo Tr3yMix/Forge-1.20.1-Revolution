@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "": {
-      "model": "minecraft:block/sugar_cane",
-      "sound": "minecraft:block.bamboo"
-    }
-  }
-}

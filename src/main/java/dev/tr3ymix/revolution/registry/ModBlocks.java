@@ -1,5 +1,6 @@
 package dev.tr3ymix.revolution.registry;
 
+import dev.imb11.sounds.sound.CustomSounds;
 import dev.tr3ymix.revolution.RevolutionMod;
 import dev.tr3ymix.revolution.block.*;
 import dev.tr3ymix.revolution.core.ClayCauldronInteraction;
@@ -28,7 +29,7 @@ public class ModBlocks {
             () -> new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(SoundType.MANGROVE_ROOTS).noCollission()), 100);
 
     public static final RegistryObject<Block> ROCK = registerBlock("rock",
-            () -> new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().sound(SoundType.BASALT).noCollission()));
+            () -> new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().sound(ModSoundType.COBBLESTONE).noCollission()));
 
     public static final RegistryObject<Block> REED_SPROUT = registerBlock("reed_sprout",
             () -> new ReedSproutBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)
@@ -58,15 +59,14 @@ public class ModBlocks {
             () -> new PotteryTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).sound(SoundType.WOOD)));
 
 
-
     public static final RegistryObject<Block> CLAY_FURNACE = registerBlock("clay_furnace",
-            () -> new ClayFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.CLAY).sound(SoundType.MUD).noOcclusion()));
+            () -> new ClayFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.CLAY).sound(ModSoundType.CLAY).noOcclusion()));
 
     public static final RegistryObject<Block> TERRACOTTA_FURNACE = registerBlock("terracotta_furnace",
             () -> new TerracottaFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.DECORATED_POT).noOcclusion().lightLevel(litBlockEmission(13))));
 
     public static final RegistryObject<Block> CLAY_CAULDRON = registerBlock("clay_cauldron",
-            () -> new ClayCauldronBlock(BlockBehaviour.Properties.copy(Blocks.CLAY).sound(SoundType.MUD).noOcclusion()));
+            () -> new ClayCauldronBlock(BlockBehaviour.Properties.copy(Blocks.CLAY).sound(ModSoundType.CLAY).noOcclusion()));
 
     public static final RegistryObject<Block> TERRACOTTA_CAULDRON = registerBlock("terracotta_cauldron",
             () -> new TerracottaCauldronBlock(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.DECORATED_POT).noOcclusion()));

@@ -3,6 +3,7 @@
     "description": {
       "text": "${mod_id} resources"
     },
-    "pack_format": 15
+    "pack_format": 15,
+    "forge:resource_pack_priority": 1000
   }
 }
