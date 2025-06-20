@@ -3,7 +3,6 @@ package dev.tr3ymix.revolution.block;
 import dev.tr3ymix.revolution.core.ClayCauldronInteraction;
 import dev.tr3ymix.revolution.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;

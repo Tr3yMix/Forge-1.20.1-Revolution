@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "revolution:block/wild_flax"
+    },
+    "half=upper": {
+      "model": "revolution:block/wild_flax_upper"
+    }
+  }
+}

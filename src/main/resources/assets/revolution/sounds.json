@@ -1,0 +1,53 @@
+{
+  "sandy_cobblestone.break": {
+    "subtitle": "revolution.sandy_cobblestone.break",
+    "sounds": [
+      "revolution:block/sandy_cobblestone/break1",
+      "revolution:block/sandy_cobblestone/break2",
+      "revolution:block/sandy_cobblestone/break3",
+      "revolution:block/sandy_cobblestone/break4",
+      "revolution:block/sandy_cobblestone/break5"
+    ]
+  },
+  "sandy_cobblestone.fall": {
+    "subtitle": "revolution.sandy_cobblestone.fall",
+    "sounds": [
+      "revolution:block/sandy_cobblestone/place1",
+      "revolution:block/sandy_cobblestone/place2",
+      "revolution:block/sandy_cobblestone/place3",
+      "revolution:block/sandy_cobblestone/place4",
+      "revolution:block/sandy_cobblestone/place5"
+    ]
+  },
+  "sandy_cobblestone.hit": {
+    "subtitle": "revolution.sandy_cobblestone.hit",
+    "sounds": [
+      "revolution:block/sandy_cobblestone/place1",
+      "revolution:block/sandy_cobblestone/place2",
+      "revolution:block/sandy_cobblestone/place3",
+      "revolution:block/sandy_cobblestone/place4",
+      "revolution:block/sandy_cobblestone/place5"
+    ]
+  },
+  "sandy_cobblestone.place": {
+    "subtitle": "revolution.sandy_cobblestone.place",
+    "sounds": [
+      "revolution:block/sandy_cobblestone/place1",
+      "revolution:block/sandy_cobblestone/place2",
+      "revolution:block/sandy_cobblestone/place3",
+      "revolution:block/sandy_cobblestone/place4",
+      "revolution:block/sandy_cobblestone/place5"
+    ]
+  },
+
+  "snowy_cobblestone.break": {
+    "subtitle": "revolution.snowy_cobblestone.break",
+    "sounds": [
+      "revolution:block/snowy_cobblestone/break1",
+      "revolution:block/snowy_cobblestone/break2",
+      "revolution:block/snowy_cobblestone/break3",
+      "revolution:block/snowy_cobblestone/break4",
+      "revolution:block/snowy_cobblestone/break5"
+    ]
+  }
+}

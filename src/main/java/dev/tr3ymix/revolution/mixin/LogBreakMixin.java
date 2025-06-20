@@ -17,6 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Block.class)
 public class LogBreakMixin {
+
     @Inject(method = "playerDestroy", at = @At("HEAD"), cancellable = true)
     private void onLogBreak(Level level, Player player, BlockPos pos, BlockState state, BlockEntity blockEntity, ItemStack tool, CallbackInfo ci) {
         if (state.is(BlockTags.LOGS)) {
@@ -26,4 +27,6 @@ public class LogBreakMixin {
             }
         }
     }
+
+
 }

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#farm_and_charm:spawns_wild_crops",
+  "features": "revolution:patch_wild_flax",
+  "step": "vegetal_decoration"
+}

@@ -4,6 +4,7 @@
   "block.revolution.wattle_and_daub": "Wattle and Daub",
   "block.revolution.wattle_and_daub_dry": "Dry Wattle and Daub",
   "block.revolution.reed_sprout": "Reeds",
+  "block.revolution.wild_flax": "Wild Flax",
   "block.revolution.plant_fiber_block": "Block of Plant Fiber",
   "block.revolution.plant_fiber_cushion": "Plant Fiber Cushion",
   "block.revolution.pottery_table": "Pottery Table",
@@ -15,7 +16,11 @@
   "block.revolution.thatch_block": "Block of Thatch",
   "block.revolution.thatch_slab_block": "Thatch Slab",
 
+  "block.revolution.silt_bricks": "Silt Bricks",
+  "block.revolution.cracked_silt_bricks": "Cracked Silt Bricks",
 
+
+  "item.revolution.rock_shard": "Rock Shard",
   "item.revolution.plant_fiber": "Plant Fiber",
   "item.revolution.kindling": "Kindling",
   "item.revolution.wood": "Wood",

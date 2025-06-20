@@ -1,0 +1,6 @@
+{
+  "parent": "revolution:block/layer_block",
+  "textures": {
+    "all": "revolution:block/rock4"
+  }
+}

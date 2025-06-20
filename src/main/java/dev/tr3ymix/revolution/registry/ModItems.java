@@ -3,10 +3,7 @@ package dev.tr3ymix.revolution.registry;
 import dev.tr3ymix.revolution.RevolutionMod;
 import dev.tr3ymix.revolution.item.*;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,8 +16,16 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, RevolutionMod.MOD_ID);
 
-    public static final RegistryObject<Item> PLANT_FIBER = ITEMS.register("plant_fiber",
+
+    public static final RegistryObject<Item> ROCK_SHARD = ITEMS.register("rock_shard",
             () -> new Item(new Item.Properties()));
+
+
+    public static final RegistryObject<Item> LONG_HANDLE = ITEMS.register("long_handle",
+            () -> new Item(new Item.Properties()));
+
+
+    //public static final RegistryObject<Item> LAWN_FLAMANGO = ITEMS.register("lawn_flamango",() -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> KINDLING = ITEMS.register("kindling",
             () -> new KindlingItem(new Item.Properties()));
@@ -43,11 +48,6 @@ public class ModItems {
     public static final RegistryObject<Item> WOODEN_HANDLE = ITEMS.register("wooden_handle",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> WOODEN_PICKAXE_HEAD = ITEMS.register("wooden_pickaxe_head",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> WOODEN_AXE_HEAD = ITEMS.register("wooden_axe_head",
-            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> WOODEN_SHOVEL_HEAD = ITEMS.register("wooden_shovel_head",
             () -> new Item(new Item.Properties()));
@@ -55,22 +55,11 @@ public class ModItems {
     public static final RegistryObject<Item> WOODEN_HOE_HEAD = ITEMS.register("wooden_hoe_head",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> WOODEN_SWORD_BLADE = ITEMS.register("wooden_sword_blade",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> STONE_PICKAXE_HEAD = ITEMS.register("stone_pickaxe_head",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> STONE_AXE_HEAD = ITEMS.register("stone_axe_head",
-            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> STONE_SHOVEL_HEAD = ITEMS.register("stone_shovel_head",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> STONE_HOE_HEAD = ITEMS.register("stone_hoe_head",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> STONE_SWORD_BLADE = ITEMS.register("stone_sword_blade",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CRAFTING_HAMMER = ITEMS.register("crafting_hammer",

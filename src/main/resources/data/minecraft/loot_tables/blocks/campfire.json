@@ -41,7 +41,7 @@
                   "function": "minecraft:set_count"
                 }
               ],
-              "name": "minecraft:stick"
+              "name": "revolution:branch"
             }
           ]
         }

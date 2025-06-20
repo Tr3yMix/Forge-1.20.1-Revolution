@@ -30,6 +30,51 @@
       {
         "model": "revolution:block/rock1",
         "y": 270
+      },
+      {
+        "model": "revolution:block/rock2"
+      },
+      {
+        "model": "revolution:block/rock2",
+        "y": 90
+      },
+      {
+        "model": "revolution:block/rock2",
+        "y": 180
+      },
+      {
+        "model": "revolution:block/rock2",
+        "y": 270
+      },
+      {
+        "model": "revolution:block/rock3"
+      },
+      {
+        "model": "revolution:block/rock3",
+        "y": 90
+      },
+      {
+        "model": "revolution:block/rock3",
+        "y": 180
+      },
+      {
+        "model": "revolution:block/rock3",
+        "y": 270
+      },
+      {
+        "model": "revolution:block/rock4"
+      },
+      {
+        "model": "revolution:block/rock4",
+        "y": 90
+      },
+      {
+        "model": "revolution:block/rock4",
+        "y": 180
+      },
+      {
+        "model": "revolution:block/rock4",
+        "y": 270
       }
     ]
   }

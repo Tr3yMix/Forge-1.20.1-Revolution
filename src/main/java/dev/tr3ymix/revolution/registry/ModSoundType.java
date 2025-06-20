@@ -6,6 +6,8 @@ import net.minecraft.world.level.block.SoundType;
 
 @SuppressWarnings("deprecation")
 public class ModSoundType {
+
+
     public static final SoundType CLAY = new SoundType(1.0F, 1.0F,
             CustomSounds.BLOCK_CLAY_BREAK.get(),
             CustomSounds.BLOCK_CLAY_STEP.get(),
@@ -40,6 +42,8 @@ public class ModSoundType {
             CustomSounds.BLOCK_ICE_PLACE.get(),
             CustomSounds.BLOCK_ICE_HIT.get(),
             CustomSounds.BLOCK_ICE_STEP.get());
+
+
 
 
 }

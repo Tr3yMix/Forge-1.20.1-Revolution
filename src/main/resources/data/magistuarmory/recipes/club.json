@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "thermal:flax"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "revolution:branch"
+    }
+  },
+  "pattern": [
+    " B",
+    "SF"
+  ],
+  "result": {
+    "item": "magistuarmory:club"
+  },
+  "show_notification": true
+}

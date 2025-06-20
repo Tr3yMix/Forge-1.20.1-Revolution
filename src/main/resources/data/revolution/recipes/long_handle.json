@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "thermal:flax"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " S",
+    "SF"
+  ],
+  "result": {
+    "item": "revolution:long_handle"
+  },
+  "show_notification": true
+}

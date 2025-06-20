@@ -1,18 +1,22 @@
 {
-  "replace": false,
+  "replace": true,
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": {
-      "item": "revolution:wooden_handle"
+    "K": {
+      "item": "hot_iron:knapped_rock"
     },
-    "H": {
-      "item": "revolution:stone_axe_head"
+    "F": {
+      "item": "thermal:flax"
+    },
+    "B": {
+      "item": "revolution:branch"
     }
+
   },
   "pattern": [
-    " H",
-    "# "
+    " K",
+    "BF"
   ],
   "result": {
     "item": "minecraft:stone_axe"

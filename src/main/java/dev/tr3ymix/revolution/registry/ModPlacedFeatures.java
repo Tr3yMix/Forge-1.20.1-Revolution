@@ -17,11 +17,12 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> PATCH_ROCK = createKey("patch_rock");
     public static final ResourceKey<PlacedFeature> PATCH_REEDS = createKey("patch_reeds");
 
+    public static final ResourceKey<PlacedFeature> PATCH_WILD_FLAX = createKey("patch_wild_flax");
+
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
 
         register(context, PATCH_BRANCH, ModConfiguredFeatures.PATCH_BRANCH, VegetationPlacements.worldSurfaceSquaredWithCount(2));
         register(context, PATCH_ROCK, ModConfiguredFeatures.PATCH_ROCK, VegetationPlacements.worldSurfaceSquaredWithCount(2));
-
         register(context, PATCH_REEDS, ModConfiguredFeatures.PATCH_REEDS, List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),

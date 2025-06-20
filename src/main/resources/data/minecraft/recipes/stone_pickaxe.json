@@ -1,5 +1,5 @@
 {
-  "replace": false,
+  "replace": true,
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {

@@ -1,6 +1,9 @@
 package dev.tr3ymix.revolution.registry;
 
-import dev.imb11.sounds.sound.CustomSounds;
+import com.ninni.twigs.registry.TwigsItems;
+import com.ordana.immersive_weathering.blocks.cracked.Crackable;
+import com.ordana.immersive_weathering.blocks.cracked.CrackableBlock;
+import com.ordana.immersive_weathering.blocks.cracked.CrackedBlock;
 import dev.tr3ymix.revolution.RevolutionMod;
 import dev.tr3ymix.revolution.block.*;
 import dev.tr3ymix.revolution.core.ClayCauldronInteraction;
@@ -25,11 +28,15 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, RevolutionMod.MOD_ID);
 
+
     public static final RegistryObject<Block> BRANCH = registerFuelBlock("branch",
             () -> new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(SoundType.MANGROVE_ROOTS).noCollission()), 100);
 
     public static final RegistryObject<Block> ROCK = registerBlock("rock",
             () -> new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().sound(ModSoundType.COBBLESTONE).noCollission()));
+
+    public static final RegistryObject<Block> WILD_FLAX = registerBlock("wild_flax",
+            ()-> new DoublePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
 
     public static final RegistryObject<Block> REED_SPROUT = registerBlock("reed_sprout",
             () -> new ReedSproutBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)
@@ -84,6 +91,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> WATTLE_AND_DAUB_DRY = registerBlock("wattle_and_daub_dry",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.PACKED_MUD).sound(SoundType.PACKED_MUD)));
+
 
     @SuppressWarnings("SameParameterValue")
     private static ToIntFunction<BlockState> litBlockEmission(int pLightLevel){
