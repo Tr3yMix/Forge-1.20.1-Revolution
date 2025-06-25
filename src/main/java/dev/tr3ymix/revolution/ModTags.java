@@ -10,4 +10,5 @@ import static dev.tr3ymix.revolution.RevolutionMod.MOD_ID;
 public interface ModTags {
     TagKey<Biome> SPAWNS_BRANCH = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "spawns_branch"));
     TagKey<Biome> SPAWNS_ROCK = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "spawns_rock"));
+    TagKey<Biome> SPAWNS_FLINT_NODULE = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "spawns_flint_nodule"));
 }

@@ -20,6 +20,9 @@ public class ModItems {
     public static final RegistryObject<Item> ROCK_SHARD = ITEMS.register("rock_shard",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> KNAPPED_FLINT_NODULE = ITEMS.register("knapped_flint_nodule",
+            () -> new Item(new Item.Properties()));
+
 
     public static final RegistryObject<Item> LONG_HANDLE = ITEMS.register("long_handle",
             () -> new Item(new Item.Properties()));

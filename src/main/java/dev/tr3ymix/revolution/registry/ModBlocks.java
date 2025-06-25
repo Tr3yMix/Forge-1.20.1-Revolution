@@ -35,6 +35,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> ROCK = registerBlock("rock",
             () -> new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().sound(ModSoundType.COBBLESTONE).noCollission()));
 
+    public static final RegistryObject<Block> FLINT_NODULE = registerBlock("flint_nodule",
+            () -> new FlintNoduleBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().sound(SoundType.BASALT).noCollission()));
+
     public static final RegistryObject<Block> WILD_FLAX = registerBlock("wild_flax",
             ()-> new DoublePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
 

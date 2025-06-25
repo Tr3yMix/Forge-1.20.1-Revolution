@@ -3,12 +3,13 @@
   "minVersion": "0.8",
   "package": "dev.tr3ymix.revolution.mixin",
   "mixins": [
-    "SoundTypeMixin",
     "CampfireMixin",
     "ClayFurnaceMixin",
     "CowEntityMixin",
     "LogBreakMixin",
-    "SoundModifierMixin"
+    "SoundModifierMixin",
+    "SoundTypeMixin",
+    "StackableItemMixin"
   ],
   "compatibilityLevel": "JAVA_17",
   "refmap": "mixins.revolution.refmap.json",

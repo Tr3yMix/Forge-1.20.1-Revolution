@@ -2,9 +2,11 @@ package dev.tr3ymix.revolution;
 
 import com.mojang.logging.LogUtils;
 
+import com.ninni.twigs.events.MiscEvents;
 import dev.tr3ymix.revolution.client.entity.renderer.SeatRenderer;
 import dev.tr3ymix.revolution.client.gui.screens.inventory.PotteryScreen;
 import dev.tr3ymix.revolution.client.gui.screens.inventory.ClayFurnaceScreen;
+import dev.tr3ymix.revolution.client.particle.FlintParticle;
 import dev.tr3ymix.revolution.core.ClayCauldronInteraction;
 import dev.tr3ymix.revolution.registry.*;
 import dev.tr3ymix.revolution.core.ClayBucketCauldronInteraction;
@@ -18,6 +20,7 @@ import net.minecraft.world.item.*;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -59,9 +62,11 @@ public class RevolutionMod
         ModRecipes.register(modEventBus);
         ModFeatures.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+        ModParticleTypes.register(modEventBus);
 
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -79,6 +84,9 @@ public class RevolutionMod
             event.accept(ModItems.LONG_HANDLE);
             event.accept(ModBlocks.BRANCH);
             event.accept(ModBlocks.ROCK);
+            event.accept(ModItems.ROCK_SHARD);
+            event.accept(ModBlocks.FLINT_NODULE);
+            event.accept(ModItems.KNAPPED_FLINT_NODULE);
             event.accept(ModItems.WOOD);
             event.accept(ModItems.THATCH);
             event.accept(ModItems.DAUB);
@@ -154,8 +162,14 @@ public class RevolutionMod
         @SubscribeEvent
         public static void registerBlockColors(RegisterColorHandlersEvent.Block event){
             BlockColors blockColors = event.getBlockColors();
+            //noinspection deprecation
             blockColors.register(((pState, pLevel, pPos, pTintIndex) -> pLevel != null && pPos != null ?
                     BiomeColors.getAverageWaterColor(pLevel, pPos) : -1), ModBlocks.WATER_TERRACOTTA_CAULDRON.get());
+        }
+
+        @SubscribeEvent
+        public static void registerParticles(RegisterParticleProvidersEvent event){
+            event.registerSpriteSet(ModParticleTypes.FLINT_PARTICLE.get(), FlintParticle::provider);
         }
 
 

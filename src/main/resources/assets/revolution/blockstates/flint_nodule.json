@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "revolution:block/flint_nodule"
+      },
+      {
+        "model": "revolution:block/flint_nodule",
+        "y": 90
+      },
+      {
+        "model": "revolution:block/flint_nodule",
+        "y": 180
+      },
+      {
+        "model": "revolution:block/flint_nodule",
+        "y": 270
+      },
+      {
+        "model": "revolution:block/flint_nodule_rotated"
+      },
+      {
+        "model": "revolution:block/flint_nodule_rotated",
+        "y": 90
+      },
+      {
+        "model": "revolution:block/flint_nodule_rotated",
+        "y": 180
+      },
+      {
+        "model": "revolution:block/flint_nodule_rotated",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#revolution:spawns_flint_nodule",
+  "features": "revolution:patch_flint_nodule",
+  "step": "vegetal_decoration"
+}

@@ -1,6 +1,7 @@
 {
   "block.revolution.branch": "Branch",
   "block.revolution.rock": "Rock",
+  "block.revolution.flint_nodule": "Flint Nodule",
   "block.revolution.wattle_and_daub": "Wattle and Daub",
   "block.revolution.wattle_and_daub_dry": "Dry Wattle and Daub",
   "block.revolution.reed_sprout": "Reeds",
@@ -21,6 +22,7 @@
 
 
   "item.revolution.rock_shard": "Rock Shard",
+  "item.revolution.knapped_flint_nodule": "Knapped Flint Nodule",
   "item.revolution.plant_fiber": "Plant Fiber",
   "item.revolution.kindling": "Kindling",
   "item.revolution.wood": "Wood",

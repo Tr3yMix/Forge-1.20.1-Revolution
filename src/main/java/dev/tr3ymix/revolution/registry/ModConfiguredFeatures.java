@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_BRANCH = createKey("patch_branch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_ROCK = createKey("patch_rock");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_FLINT_NODULE = createKey("patch_flint_nodule");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_REEDS = createKey("patch_reeds");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -26,6 +27,10 @@ public class ModConfiguredFeatures {
         )));
         registerConfiguredFeature(context, PATCH_ROCK, Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(2, PlacementUtils.onlyWhenEmpty(
                 ModFeatures.LAYER_BLOCK.get(), new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ROCK.get()))
+        )));
+
+        registerConfiguredFeature(context, PATCH_FLINT_NODULE, Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(2, PlacementUtils.onlyWhenEmpty(
+                ModFeatures.LAYER_BLOCK.get(), new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FLINT_NODULE.get()))
         )));
 
         registerConfiguredFeature(context, PATCH_REEDS, Feature.RANDOM_PATCH, new RandomPatchConfiguration(150, 10, 2, PlacementUtils.onlyWhenEmpty(
