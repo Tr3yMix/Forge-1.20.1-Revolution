@@ -1,46 +1,37 @@
 
-Source installation information for modders
--------------------------------------------
-This code follows the Minecraft Forge installation methodology. It will apply
-some small patches to the vanilla MCP source code, giving you and it access 
-to some of the data and functions you need to build a successful mod.
+# Revolution Mod by Tr3yMix
 
-Note also that the patches are built against "un-renamed" MCP source code (aka
-SRG Names) - this means that you will not be able to read them directly against
-normal code.
+A story-driven progression mod for Minecraft 1.20.1 that overhauls early survival with realistic crafting, clay mold systems, and dimension-based narrative goals.
 
-Setup Process:
-==============================
+## Features
+- Primitive crafting with clay molds and flint tools
+- Dimension restoration with portal crafting and storyline quests
+- Realistic survival mechanics and time-based world progression
+- Custom recipe types: carving, casting, shaping
+- Villager questlines and portal hub dimension (Emerald Isle)
 
-Step 1: Open your command-line and browse to the folder where you extracted the zip file.
+## Development Setup
 
-Step 2: You're left with a choice.
-If you prefer to use Eclipse:
-1. Run the following command: `./gradlew genEclipseRuns`
-2. Open Eclipse, Import > Existing Gradle Project > Select Folder 
-   or run `gradlew eclipse` to generate the project.
+### Requirements
+- Minecraft 1.20.1
+- Forge MDK 47.x.x
+- Java 17+
+- IntelliJ IDEA or Eclipse
 
-If you prefer to use IntelliJ:
-1. Open IDEA, and import project.
-2. Select your build.gradle file and have it import.
-3. Run the following command: `./gradlew genIntellijRuns`
-4. Refresh the Gradle Project in IDEA if required.
+### Setup Instructions
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can 
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-(this does not affect your code) and then start the process again.
+#### IntelliJ IDEA
+1. Clone the repository
+2. Run `./gradlew genIntellijRuns`
+3. Open `build.gradle` in IntelliJ and let it import
+4. Sync Gradle and refresh the project
 
-Mapping Names:
-=============================
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license, if you do not agree with it you can change your mapping names to other crowdsourced names in your 
-build.gradle. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
+#### Eclipse
+1. Clone the repository
+2. Run `./gradlew genEclipseRuns`
+3. Open Eclipse > Import Gradle Project > Select project folder
 
-Additional Resources: 
-=========================
-Community Documentation: https://docs.minecraftforge.net/en/1.20.1/gettingstarted/
-LexManos' Install Video: https://youtu.be/8VEdtQLuLO0
-Forge Forums: https://forums.minecraftforge.net/
-Forge Discord: https://discord.minecraftforge.net/
+If libraries fail to load, use:
+```sh
+./gradlew --refresh-dependencies
+./gradlew clean
