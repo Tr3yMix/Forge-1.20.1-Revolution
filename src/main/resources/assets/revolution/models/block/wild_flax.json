@@ -1,7 +1,9 @@
 {
   "render_type": "cutout",
-  "parent": "minecraft:block/cross",
+  "parent": "revolution:block/wild_crop",
   "textures": {
-    "cross": "thermal:block/flax_6"
+    "sides": "revolution:block/flax_4",
+    "cross": "revolution:block/wild_flax_bottom",
+    "top_cross": "revolution:block/wild_flax_top"
   }
 }

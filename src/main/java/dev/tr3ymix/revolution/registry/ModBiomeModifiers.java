@@ -19,13 +19,13 @@ import org.jetbrains.annotations.NotNull;
 
 public class ModBiomeModifiers {
 
-    private static final ResourceKey<BiomeModifier> ADD_BRANCH = createKey("add_branch");
+    //private static final ResourceKey<BiomeModifier> ADD_BRANCH = createKey("add_branch");
     private static final ResourceKey<BiomeModifier> ADD_ROCK = createKey("add_rock");
     private static final ResourceKey<BiomeModifier> ADD_FLINT_NODULE = createKey("add_flint_nodule");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
-        context.register(ADD_BRANCH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(biomeTag(context, ModTags.SPAWNS_BRANCH),
-                getPlacedFeature(context, ModPlacedFeatures.PATCH_BRANCH), GenerationStep.Decoration.VEGETAL_DECORATION));
+        //context.register(ADD_BRANCH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(biomeTag(context, ModTags.SPAWNS_BRANCH),
+         //       getPlacedFeature(context, ModPlacedFeatures.PATCH_BRANCH), GenerationStep.Decoration.VEGETAL_DECORATION));
         context.register(ADD_ROCK, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(biomeTag(context, ModTags.SPAWNS_ROCK),
                 getPlacedFeature(context, ModPlacedFeatures.PATCH_ROCK), GenerationStep.Decoration.VEGETAL_DECORATION));
 

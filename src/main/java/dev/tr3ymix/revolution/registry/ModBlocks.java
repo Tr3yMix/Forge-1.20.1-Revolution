@@ -39,7 +39,7 @@ public class ModBlocks {
             () -> new FlintNoduleBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().sound(SoundType.BASALT).noCollission()));
 
     public static final RegistryObject<Block> WILD_FLAX = registerBlock("wild_flax",
-            ()-> new DoublePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+            ()-> new BushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
 
     public static final RegistryObject<Block> REED_SPROUT = registerBlock("reed_sprout",
             () -> new ReedSproutBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)

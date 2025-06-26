@@ -13,7 +13,7 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final ResourceKey<PlacedFeature> PATCH_BRANCH = createKey("patch_branch");
+   // public static final ResourceKey<PlacedFeature> PATCH_BRANCH = createKey("patch_branch");
     public static final ResourceKey<PlacedFeature> PATCH_ROCK = createKey("patch_rock");
     public static final ResourceKey<PlacedFeature> PATCH_FLINT_NODULE = createKey("patch_flint_nodule");
     public static final ResourceKey<PlacedFeature> PATCH_REEDS = createKey("patch_reeds");
@@ -21,7 +21,7 @@ public class ModPlacedFeatures {
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
 
-        register(context, PATCH_BRANCH, ModConfiguredFeatures.PATCH_BRANCH, VegetationPlacements.worldSurfaceSquaredWithCount(2));
+       // register(context, PATCH_BRANCH, ModConfiguredFeatures.PATCH_BRANCH, VegetationPlacements.worldSurfaceSquaredWithCount(2));
         register(context, PATCH_ROCK, ModConfiguredFeatures.PATCH_ROCK, VegetationPlacements.worldSurfaceSquaredWithCount(2));
         register(context, PATCH_FLINT_NODULE, ModConfiguredFeatures.PATCH_FLINT_NODULE, VegetationPlacements.worldSurfaceSquaredWithCount(2));
         register(context, PATCH_REEDS, ModConfiguredFeatures.PATCH_REEDS, List.of(

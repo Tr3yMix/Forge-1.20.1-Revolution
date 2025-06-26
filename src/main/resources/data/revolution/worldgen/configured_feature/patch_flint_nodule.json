@@ -3,7 +3,7 @@
   "config": {
     "feature": {
       "feature": {
-        "type": "revolution:layer_block",
+        "type": "revolution:simple_block",
         "config": {
           "to_place": {
             "type": "minecraft:simple_state_provider",
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "tries": 2,
+    "tries": 1,
     "xz_spread": 7,
     "y_spread": 3
   }

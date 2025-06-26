@@ -148,6 +148,7 @@ dependencies {
     implementation fg.deobf("curse.maven:sound-925889:5940443")
     implementation fg.deobf("curse.maven:immersive-weathering-forge-592449:6116941")
     implementation fg.deobf("curse.maven:hot-iron-1199047:6402869")
+    runtimeOnly fg.deobf("curse.maven:lets-do-farm-charm-1038103:6561948")
 
 
 
@@ -159,7 +160,7 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:cofh-core-69162:5374122")
     runtimeOnly fg.deobf("curse.maven:thermal-foundation-222880:5443583")
     runtimeOnly fg.deobf("curse.maven:simple-spears-877560:5546549")
-    runtimeOnly fg.deobf("curse.maven:lets-do-farm-charm-1038103:6561948")
+
     runtimeOnly fg.deobf("curse.maven:simply-swords-659887:5639538")
     runtimeOnly fg.deobf("curse.maven:epic-knights-armor-and-weapons-509041:6373737")
 

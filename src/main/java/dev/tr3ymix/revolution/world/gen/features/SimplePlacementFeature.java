@@ -11,8 +11,8 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 
-public class LayerBlockFeature extends Feature<SimpleBlockConfiguration> {
-    public LayerBlockFeature(Codec<SimpleBlockConfiguration> codec) {
+public class SimplePlacementFeature extends Feature<SimpleBlockConfiguration> {
+    public SimplePlacementFeature(Codec<SimpleBlockConfiguration> codec) {
         super(codec);
     }
 
