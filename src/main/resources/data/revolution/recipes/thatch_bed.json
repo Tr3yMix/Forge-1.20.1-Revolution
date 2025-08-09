@@ -3,15 +3,15 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "revolution:plant_fiber_cushion"
+      "item": "revolution:thatch"
     },
-    "W": {
-      "item": "revolution:wood"
+    "B": {
+      "item": "revolution:branch"
     }
   },
   "pattern": [
     "##",
-    "WW"
+    "BB"
   ],
   "result": {
     "item": "revolution:thatch_bed"

@@ -39,7 +39,13 @@ public class ModBlocks {
             () -> new FlintNoduleBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().sound(SoundType.BASALT).noCollission()));
 
     public static final RegistryObject<Block> WILD_FLAX = registerBlock("wild_flax",
-            ()-> new BushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+            ()-> new BushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_CYAN).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+
+    public static final RegistryObject<Block> WILD_YUCCA = registerBlock("wild_yucca",
+            ()-> new YuccaPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2F).noOcclusion().sound(SoundType.BAMBOO).offsetType(BlockBehaviour.OffsetType.XZ).dynamicShape()));
+
+    public static final RegistryObject<Block> FLAX_CROP = BLOCKS.register("flax_crop",
+            () -> new FlaxCropBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> REED_SPROUT = registerBlock("reed_sprout",
             () -> new ReedSproutBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)

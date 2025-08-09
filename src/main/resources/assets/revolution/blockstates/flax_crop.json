@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "revolution:block/flax_0"
+    },
+    "age=1": {
+      "model": "revolution:block/flax_1"
+    },
+    "age=2": {
+      "model": "revolution:block/flax_2"
+    },
+    "age=3": {
+      "model": "revolution:block/flax_3"
+    },
+    "age=4": {
+      "model": "revolution:block/flax_4"
+    }
+  }
+}

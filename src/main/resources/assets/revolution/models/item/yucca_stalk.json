@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "revolution:block/wild_flax_top"
+    "layer0": "revolution:item/yucca_stalk"
   }
 }

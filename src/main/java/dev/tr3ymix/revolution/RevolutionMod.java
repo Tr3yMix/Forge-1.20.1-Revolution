@@ -2,7 +2,6 @@ package dev.tr3ymix.revolution;
 
 import com.mojang.logging.LogUtils;
 
-import com.ninni.twigs.events.MiscEvents;
 import dev.tr3ymix.revolution.client.entity.renderer.SeatRenderer;
 import dev.tr3ymix.revolution.client.gui.screens.inventory.PotteryScreen;
 import dev.tr3ymix.revolution.client.gui.screens.inventory.ClayFurnaceScreen;
@@ -89,6 +88,11 @@ public class RevolutionMod
             event.accept(ModItems.KNAPPED_FLINT_NODULE);
             event.accept(ModItems.WOOD);
             event.accept(ModItems.THATCH);
+            event.accept(ModItems.FLAX_SEEDS);
+            event.accept(ModItems.YUCCA_LEAVES);
+            event.accept(ModItems.YUCCA_STALK);
+            event.accept(ModItems.YUCCA_SEEDS);
+            event.accept(ModItems.YUCCA_FIBER);
             event.accept(ModItems.DAUB);
             event.accept(ModItems.COW_HIDE);
             event.accept(ModItems.SHEEP_HIDE);
@@ -112,6 +116,7 @@ public class RevolutionMod
             event.accept(ModBlocks.THATCH_SLAB);
             event.accept(ModBlocks.PLANT_FIBER_BLOCK);
             event.accept(ModBlocks.WILD_FLAX);
+            event.accept(ModBlocks.WILD_YUCCA);
 
         }
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){

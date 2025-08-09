@@ -4,6 +4,7 @@ import dev.tr3ymix.revolution.RevolutionMod;
 import dev.tr3ymix.revolution.item.*;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,8 +28,21 @@ public class ModItems {
     public static final RegistryObject<Item> LONG_HANDLE = ITEMS.register("long_handle",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> YUCCA_LEAVES = ITEMS.register("yucca_leaves",
+            () -> new Item(new Item.Properties()));
 
-    //public static final RegistryObject<Item> LAWN_FLAMANGO = ITEMS.register("lawn_flamango",() -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> YUCCA_STALK = ITEMS.register("yucca_stalk",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> YUCCA_SEEDS = ITEMS.register("yucca_seeds",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> YUCCA_FIBER = ITEMS.register("yucca_fiber",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> FLAX_SEEDS = ITEMS.register("flax_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.FLAX_CROP.get(),new Item.Properties()));
+
 
     public static final RegistryObject<Item> KINDLING = ITEMS.register("kindling",
             () -> new KindlingItem(new Item.Properties()));
