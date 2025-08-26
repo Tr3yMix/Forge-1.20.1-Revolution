@@ -1,13 +1,11 @@
 package dev.tr3ymix.revolution.registry;
 
-import com.ninni.twigs.registry.TwigsItems;
-import com.ordana.immersive_weathering.blocks.cracked.Crackable;
-import com.ordana.immersive_weathering.blocks.cracked.CrackableBlock;
-import com.ordana.immersive_weathering.blocks.cracked.CrackedBlock;
+
 import dev.tr3ymix.revolution.RevolutionMod;
 import dev.tr3ymix.revolution.block.*;
 import dev.tr3ymix.revolution.core.ClayCauldronInteraction;
 import dev.tr3ymix.revolution.item.FuelBlockItem;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -29,6 +27,16 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, RevolutionMod.MOD_ID);
 
 
+    public static final RegistryObject<Block> FRESH_TORCH = BLOCKS.register("fresh_torch",
+            () -> new UnlitTorchBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> FRESH_WALL_TORCH = BLOCKS.register("fresh_wall_torch",
+            () -> new UnlitWallTorchBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> BURNED_TORCH = BLOCKS.register("burned_torch",
+            () -> new UnlitTorchBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> BURNED_WALL_TORCH = BLOCKS.register("burned_wall_torch",
+            () -> new UnlitWallTorchBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> BRANCH = registerFuelBlock("branch",
             () -> new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(SoundType.MANGROVE_ROOTS).noCollission()), 100);
 
@@ -42,7 +50,10 @@ public class ModBlocks {
             ()-> new BushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_CYAN).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
 
     public static final RegistryObject<Block> WILD_YUCCA = registerBlock("wild_yucca",
-            ()-> new YuccaPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2F).noOcclusion().sound(SoundType.BAMBOO).offsetType(BlockBehaviour.OffsetType.XZ).dynamicShape()));
+            ()-> new YuccaPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2F).noOcclusion().sound(SoundType.BAMBOO_SAPLING).offsetType(BlockBehaviour.OffsetType.XZ).dynamicShape()));
+
+    public static final RegistryObject<Block> YUCCA_SAPLING = BLOCKS.register("yucca_sapling",
+            () -> new YuccaSaplingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).instabreak().noOcclusion().noCollission().sound(SoundType.BAMBOO_SAPLING).offsetType(BlockBehaviour.OffsetType.XZ).randomTicks()));
 
     public static final RegistryObject<Block> FLAX_CROP = BLOCKS.register("flax_crop",
             () -> new FlaxCropBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));

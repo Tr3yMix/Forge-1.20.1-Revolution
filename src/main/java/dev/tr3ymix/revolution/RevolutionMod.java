@@ -7,6 +7,7 @@ import dev.tr3ymix.revolution.client.gui.screens.inventory.PotteryScreen;
 import dev.tr3ymix.revolution.client.gui.screens.inventory.ClayFurnaceScreen;
 import dev.tr3ymix.revolution.client.particle.FlintParticle;
 import dev.tr3ymix.revolution.core.ClayCauldronInteraction;
+import dev.tr3ymix.revolution.mixin.BlockAccessor;
 import dev.tr3ymix.revolution.registry.*;
 import dev.tr3ymix.revolution.core.ClayBucketCauldronInteraction;
 import net.minecraft.client.color.block.BlockColors;
@@ -16,6 +17,8 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 
 import net.minecraft.world.item.*;
 
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.TorchBlock;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
@@ -74,6 +77,19 @@ public class RevolutionMod
         ClayBucketCauldronInteraction.bootStrap();
 
         event.enqueueWork(ModSoundOverrides::registerOverrides);
+        /*
+        event.enqueueWork(() -> {
+
+            TorchBlock torch = (TorchBlock) Blocks.TORCH;
+            BlockAccessor accessor = (BlockAccessor) torch;
+
+            ((BlockAccessor) torch).revolution$registerDefaultState(
+                    accessor.revolution$getStateDefinition().any().setValue()
+            );
+
+        });
+
+         */
     }
 
 
@@ -91,7 +107,6 @@ public class RevolutionMod
             event.accept(ModItems.FLAX_SEEDS);
             event.accept(ModItems.YUCCA_LEAVES);
             event.accept(ModItems.YUCCA_STALK);
-            event.accept(ModItems.YUCCA_SEEDS);
             event.accept(ModItems.YUCCA_FIBER);
             event.accept(ModItems.DAUB);
             event.accept(ModItems.COW_HIDE);
@@ -128,8 +143,11 @@ public class RevolutionMod
             event.accept(ModBlocks.CLAY_CAULDRON);
             event.accept(ModBlocks.TERRACOTTA_CAULDRON);
             event.accept(ModBlocks.POTTERY_TABLE);
+
         }
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.FRESH_TORCH);
+            event.accept(ModItems.BURNED_TORCH);
             event.accept(ModItems.KINDLING);
             event.accept(ModItems.CLAY_BUCKET);
             event.accept(ModItems.CLAY_WATER_BUCKET);
@@ -139,6 +157,7 @@ public class RevolutionMod
             event.accept(ModItems.CLAY_CRUCIBLE);
             event.accept(ModItems.CLAY_RAW_IRON_CRUCIBLE);
             event.accept(ModItems.CLAY_MOLTEN_IRON_CRUCIBLE);
+            event.accept(ModItems.TORCH_BRACKET);
         }
 
     }

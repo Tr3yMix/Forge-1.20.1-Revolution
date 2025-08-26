@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=east": [
+      { "model": "revolution:block/fresh_wall_torch" }
+    ],
+    "facing=north": [
+      { "model": "revolution:block/fresh_wall_torch", "y": 270 }
+    ],
+    "facing=south": [
+      { "model": "revolution:block/fresh_wall_torch", "y": 90 }
+    ],
+    "facing=west": [
+      { "model": "revolution:block/fresh_wall_torch", "y": 180 }
+    ]
+  }
+}

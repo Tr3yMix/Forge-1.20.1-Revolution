@@ -1,0 +1,12 @@
+package dev.tr3ymix.revolution.mixin;
+
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.block.state.BlockState;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.gen.Invoker;
+
+@Mixin(targets = "net.minecraft.world.item.BlockItem")
+public interface BlockItemAccessor {
+    @Invoker("getPlacementState")
+    BlockState revolution$getPlacementState(BlockPlaceContext context);
+}

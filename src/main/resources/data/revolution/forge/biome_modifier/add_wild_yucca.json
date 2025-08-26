@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#forge:is_dry/overworld",
+  "biomes": "#revolution:spawns_yucca",
   "features": "revolution:patch_wild_yucca",
   "step": "vegetal_decoration"
 }

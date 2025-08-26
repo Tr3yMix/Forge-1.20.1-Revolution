@@ -1,0 +1,37 @@
+{
+  "parent": "revolution:block/burned_torch",
+  "gui_light": "front",
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [-38, 90, 55],
+      "translation": [0, 3.5, 3],
+      "scale": [0.85, 0.85, 0.85]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [-38, -90, -55],
+      "translation": [0, 3.5, 3],
+      "scale": [0.85, 0.85, 0.85]
+    },
+    "firstperson_righthand": {
+      "rotation": [-22, 88, 0],
+      "translation": [2.5, 6, -0.75]
+    },
+    "firstperson_lefthand": {
+      "rotation": [-22, -88, 0],
+      "translation": [2.5, 6, -0.75]
+    },
+    "ground": {
+      "translation": [0, 2, 0],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "head": {
+      "rotation": [0, 90, 0],
+      "translation": [0, 13, 0]
+    },
+    "fixed": {
+      "rotation": [0, 90, 0],
+      "translation": [0, 2.5, 0]
+    }
+  }
+
+}

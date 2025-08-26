@@ -6,6 +6,7 @@
   "block.revolution.wattle_and_daub_dry": "Dry Wattle and Daub",
   "block.revolution.reed_sprout": "Reeds",
   "block.revolution.wild_flax": "Wild Flax",
+
   "block.revolution.wild_yucca": "Wild Yucca",
   "block.revolution.plant_fiber_block": "Block of Plant Fiber",
   "block.revolution.plant_fiber_cushion": "Plant Fiber Cushion",
@@ -17,6 +18,8 @@
   "block.revolution.terracotta_cauldron": "Clay Cauldron",
   "block.revolution.thatch_block": "Block of Thatch",
   "block.revolution.thatch_slab_block": "Thatch Slab",
+  "block.revolution.fresh_torch": "Torch",
+  "block.revolution.burned_torch": "Torch",
 
   "block.revolution.silt_bricks": "Silt Bricks",
   "block.revolution.cracked_silt_bricks": "Cracked Silt Bricks",
@@ -59,6 +62,9 @@
   "item.revolution.clay_crucible": "Clay Crucible",
   "item.revolution.clay_raw_iron_crucible": "Clay Crucible of Raw Iron",
   "item.revolution.clay_molten_iron_crucible": "Clay Crucible of Molten Iron",
+  "item.revolution.torch_bracket": "Torch Bracket",
+  "item.revolution.fresh_torch": "Torch",
+  "item.revolution.burned_torch": "Torch",
 
   "revolution.container.clay_furnace": "Clay Furnace",
   "revolution.container.pottery_table": "Pottery Table"

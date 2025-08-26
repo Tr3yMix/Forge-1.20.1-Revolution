@@ -14,8 +14,6 @@ public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS =
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, RevolutionMod.MOD_ID);
 
-    public static final RegistryObject<SoundEvent> SANDY_COBBLESTONE_BREAK = register("sandy_cobblestone.break");
-
 
     private static RegistryObject<SoundEvent> register(String name) {
         return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(RevolutionMod.MOD_ID, name)));
@@ -23,5 +21,6 @@ public class ModSounds {
 
     public static void register(IEventBus eventBus) {
         SOUNDS.register(eventBus);
+        register("sandy_cobblestone.break");
     }
 }

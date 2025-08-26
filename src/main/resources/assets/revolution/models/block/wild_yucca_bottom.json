@@ -5,7 +5,6 @@
 	"render_type": "cutout",
 	"textures": {
 		"0": "revolution:block/yucca_leaves",
-		"1": "revolution:block/yucca_stalk",
 		"3": "revolution:block/yucca_leaf",
 		"particle": "revolution:block/yucca_leaves"
 	},
@@ -345,19 +344,6 @@
 				"up": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "#0"},
 				"down": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#0"}
 			}
-		},
-		{
-			"from": [7, 0, 7],
-			"to": [9, 16, 9],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
-			"faces": {
-				"north": {"uv": [0, 0, 2, 16], "texture": "#1"},
-				"east": {"uv": [0, 0, 2, 16], "texture": "#1"},
-				"south": {"uv": [0, 0, 2, 16], "texture": "#1"},
-				"west": {"uv": [0, 0, 2, 16], "texture": "#1"},
-				"up": {"uv": [14, 1, 16, 3], "texture": "#1"},
-				"down": {"uv": [0, 0, 2, 2], "texture": "#1"}
-			}
 		}
 	],
 	"groups": [
@@ -396,7 +382,6 @@
 			"origin": [8, 8, 8],
 			"color": 0,
 			"children": [22, 23]
-		},
-		24
+		}
 	]
 }

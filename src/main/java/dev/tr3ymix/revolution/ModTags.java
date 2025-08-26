@@ -4,6 +4,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
@@ -18,4 +19,7 @@ public interface ModTags {
 
     //Blocks
     TagKey<Block> BONEMEALABLE_WILD_CROPS = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "bonemealable_wild_crops"));
+    TagKey<Block> MOUNTED_TORCHES = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "mounted_torches"));
+
+    TagKey<Item> IGNITER_ITEMS = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID, "igniter_items"));
 }

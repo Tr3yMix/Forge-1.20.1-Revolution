@@ -1,0 +1,104 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "immersive_weathering:spruce_leaf_pile",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "immersive_weathering:spruce_leaf_pile",
+                  "properties": { "layers": "1" }
+                }
+              ],
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "immersive_weathering:spruce_leaf_pile",
+                  "properties": { "layers": "2" }
+                }
+              ],
+              "count": 2
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "immersive_weathering:spruce_leaf_pile",
+                  "properties": { "layers": "3" }
+                }
+              ],
+              "count": 3
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "immersive_weathering:spruce_leaf_pile",
+                  "properties": { "layers": "4" }
+                }
+              ],
+              "count": 4
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "immersive_weathering:spruce_leaf_pile",
+                  "properties": { "layers": "5" }
+                }
+              ],
+              "count": 5
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "immersive_weathering:spruce_leaf_pile",
+                  "properties": { "layers": "6" }
+                }
+              ],
+              "count": 6
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "immersive_weathering:spruce_leaf_pile",
+                  "properties": { "layers": "7" }
+                }
+              ],
+              "count": 7
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "immersive_weathering:spruce_leaf_pile",
+                  "properties": { "layers": "8" }
+                }
+              ],
+              "count": 8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

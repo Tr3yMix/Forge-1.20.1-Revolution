@@ -2,9 +2,11 @@ package dev.tr3ymix.revolution.registry;
 
 import dev.tr3ymix.revolution.RevolutionMod;
 import dev.tr3ymix.revolution.item.*;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -16,6 +18,14 @@ public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, RevolutionMod.MOD_ID);
+
+    public static final RegistryObject<Item> FRESH_TORCH = ITEMS.register("fresh_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.FRESH_TORCH.get(), ModBlocks.FRESH_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> BURNED_TORCH = ITEMS.register("burned_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.BURNED_TORCH.get(), ModBlocks.BURNED_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
 
 
     public static final RegistryObject<Item> ROCK_SHARD = ITEMS.register("rock_shard",
@@ -31,11 +41,10 @@ public class ModItems {
     public static final RegistryObject<Item> YUCCA_LEAVES = ITEMS.register("yucca_leaves",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> YUCCA_STALK = ITEMS.register("yucca_stalk",
-            () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> YUCCA_SEEDS = ITEMS.register("yucca_seeds",
-            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> YUCCA_STALK = ITEMS.register("yucca_stalk",
+            () -> new ItemNameBlockItem(ModBlocks.YUCCA_SAPLING.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> YUCCA_FIBER = ITEMS.register("yucca_fiber",
             () -> new Item(new Item.Properties()));
@@ -117,6 +126,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> CLAY_MOLTEN_IRON_CRUCIBLE = ITEMS.register("clay_molten_iron_crucible",
             () -> new Item(new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> TORCH_BRACKET = ITEMS.register("torch_bracket",
+            () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

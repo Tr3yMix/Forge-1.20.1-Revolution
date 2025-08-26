@@ -14,10 +14,11 @@ public class ModFeatures {
 
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, RevolutionMod.MOD_ID);
 
-    public static final RegistryObject<Feature<SimpleBlockConfiguration>> SIMPLE_BLOCK =
-            FEATURES.register("simple_block", () -> new SimplePlacementFeature(SimpleBlockConfiguration.CODEC));
+    //public static final RegistryObject<Feature<SimpleBlockConfiguration>> SIMPLE_BLOCK =
+
 
     public static void register(IEventBus eventBus) {
+        FEATURES.register("simple_block", () -> new SimplePlacementFeature(SimpleBlockConfiguration.CODEC));
         FEATURES.register(eventBus);
     }
 }
