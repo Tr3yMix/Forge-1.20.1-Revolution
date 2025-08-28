@@ -37,6 +37,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> BURNED_WALL_TORCH = BLOCKS.register("burned_wall_torch",
             () -> new UnlitWallTorchBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> BURNED_SOUL_TORCH = BLOCKS.register("burned_soul_torch",
+            () -> new UnlitSoulTorchBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> BURNED_SOUL_WALL_TORCH = BLOCKS.register("burned_soul_wall_torch",
+            () -> new UnlitSoulWallTorchBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY)));
+
+
     public static final RegistryObject<Block> BRANCH = registerFuelBlock("branch",
             () -> new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(SoundType.MANGROVE_ROOTS).noCollission()), 100);
 

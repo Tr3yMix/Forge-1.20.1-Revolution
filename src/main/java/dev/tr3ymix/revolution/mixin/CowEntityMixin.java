@@ -16,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+
 @Mixin(Cow.class)
 public abstract class CowEntityMixin {
     @Inject(method = "mobInteract", at = @At("HEAD"), cancellable = true)
@@ -29,13 +30,10 @@ public abstract class CowEntityMixin {
                 ItemStack milk = ItemUtils.createFilledResult(stack, pPlayer, ModItems.CLAY_MILK_BUCKET.get().getDefaultInstance());
                 pPlayer.setItemInHand(pHand, milk);
 
-
-
             } else if (stack.getItem() == Items.BUCKET) {
                 pPlayer.playSound(SoundEvents.COW_MILK, 1.0F, 1.0F);
                 ItemStack milk = ItemUtils.createFilledResult(stack, pPlayer, Items.MILK_BUCKET.getDefaultInstance());
                 pPlayer.setItemInHand(pHand, milk);
-
 
             }else{
                 cir.setReturnValue(cow.mobInteract(pPlayer, pHand));

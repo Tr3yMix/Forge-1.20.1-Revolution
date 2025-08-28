@@ -27,6 +27,10 @@ public class ModItems {
             () -> new StandingAndWallBlockItem(ModBlocks.BURNED_TORCH.get(), ModBlocks.BURNED_WALL_TORCH.get(),
                     new Item.Properties(), Direction.DOWN));
 
+    public static final RegistryObject<Item> BURNED_SOUL_TORCH = ITEMS.register("burned_soul_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.BURNED_TORCH.get(), ModBlocks.BURNED_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
 
     public static final RegistryObject<Item> ROCK_SHARD = ITEMS.register("rock_shard",
             () -> new Item(new Item.Properties()));

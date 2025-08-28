@@ -8,13 +8,8 @@ import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
 
-@Mixin(targets = "net.minecraft.world.level.block.Block")
+@Mixin(Block.class)
 public interface BlockAccessor {
-    /*
-    @Invoker("getPlacementState")
-    BlockState revolution$getPlacementState(BlockPlaceContext context);
-
-     */
 
     @Invoker("defaultBlockState")
     BlockState revolution$defaultBlockState();
